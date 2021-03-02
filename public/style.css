@@ -1,0 +1,66 @@
+
+body{
+    background-image: linear-gradient(to right top, rgb(47, 189, 214), black);
+}
+
+img{
+    width: 514px;
+    position: relative;
+    margin: 0 auto;
+}
+
+form{
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    min-height: 95vh;
+    max-width: 33rem;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+fieldset{
+    padding-top: 20px;
+    border-radius: 7px;
+    margin-top: 15px;
+    background-color: whitesmoke;
+}
+
+legend{
+    text-align: center;
+    font-weight: bolder;
+    padding: 0px 8px 0px 8px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+input{
+    margin-bottom: 10px;
+    width: 257px;
+}
+
+button{
+    margin-top: 13px;
+    width: 100px;
+    display: block;
+    text-align: center;
+    margin: 22px auto;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 480px){
+    img{
+        width: 20em;
+    }
+    input{
+        display: block;
+        position: relative;
+        left: 17px;
+        top: 6px;
+        padding-right: 84px;
+        width: auto;
+    }
+}
