@@ -1,17 +1,17 @@
 const conexao = require('../infraestrutura/conexao')
 
 class Atendimento{
-    adiciona(atendimento){
+    adiciona(atendimento, res){
         
 
-        const sql = 'INSERT INTO atendimentosidosos70 SET ?'
+        const sql = 'INSERT INTO atendimentosidosos60 SET ?'
 
         conexao.query(sql, atendimento,(erro, resultados) => {
             if(erro){
-                console.log(erro)
+                res.send('cpf já cadastrado!')
             } else{
-                console.log(resultados)
-            }
+            res.send('<a href="http://vgpcontraacovid.ddns.net:2002/">Tudo certo! Clique aqui para continuar o cadastro!</a>')
+        }
         } )
     }
 }
