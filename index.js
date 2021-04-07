@@ -24,11 +24,11 @@ conexao.connect(erro => {
             return res.sendFile(path.join(__dirname, 'public', 'pagina.html'))
         })
         
-        server.post('/pagina.html', (req, res) => {
-            //console.log(req.body)
+        server.post('/', (req, res) => {
             const atendimento = req.body
-            Atendimento.adiciona(atendimento)
-            res.sendFile(path.join(__dirname, 'public', 'fimCadastro.html'))
+    
+            Atendimento.adiciona(atendimento, res)
+            
         } )
 
         Tabelas.init(conexao)
