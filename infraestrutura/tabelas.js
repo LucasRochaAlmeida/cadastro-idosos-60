@@ -9,17 +9,7 @@ class Tabelas{
 
     criarAtendimentos(){
         const sql = `CREATE TABLE IF NOT EXISTS atendimentosidosos60 
-            (nome text,
-            cpf varchar(15),
-            dataDeNascimento text,
-            idade text,
-            tel text,
-            tel2 text,
-            logradouro text,
-            numero text,
-            bairro text,
-            municipio text,
-            estado text,
+            (cpf varchar(15),
             PRIMARY KEY(cpf))`
         
 
