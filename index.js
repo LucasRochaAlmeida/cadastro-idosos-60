@@ -33,7 +33,7 @@ conexao.connect(erro => {
 
         Tabelas.init(conexao)
         
-        server.listen(2003)
+        server.listen(3000)
     }
 
 })
