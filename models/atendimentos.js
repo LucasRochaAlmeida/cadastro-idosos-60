@@ -1,4 +1,5 @@
 const conexao = require('../infraestrutura/conexao')
+const path = require('path')
 
 class Atendimento{
     adiciona(atendimento, res){
@@ -9,8 +10,10 @@ class Atendimento{
         conexao.query(sql, atendimento,(erro, resultados) => {
             if(erro){
                 res.send('cpf já cadastrado!')
+                console.log(erro)
             } else{
-            res.send('<a href="http://vgpcontraacovid.ddns.net:2002/">Tudo certo! Clique aqui para continuar o cadastro!</a>')
+            res.sendFile(path.join(__dirname,'fimcadastro.html'))
+            console.log(resultados)
         }
         } )
     }
