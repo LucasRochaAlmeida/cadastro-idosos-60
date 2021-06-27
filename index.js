@@ -31,6 +31,10 @@ conexao.connect(erro => {
             
         } )
 
+        server.get('/lista', (req, res) => {
+            Atendimento.lista(res)
+        })
+
         Tabelas.init(conexao)
         
         server.listen(3000)

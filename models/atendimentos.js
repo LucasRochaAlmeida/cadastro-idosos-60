@@ -17,6 +17,19 @@ class Atendimento{
         }
         } )
     }
+
+    lista(res){
+        const sql = 'SELECT cpf FROM atendimentosidosos60'
+
+        conexao.query(sql, (erro, resultados) => {
+            if(erro){
+                res.status(400).json(erro)
+            } else{
+                res.status(200).json(resultados)
+        }
+
+        } )
+    }
 }
 
 module.exports = new Atendimento
